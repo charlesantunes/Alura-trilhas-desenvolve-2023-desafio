@@ -1,0 +1,353 @@
+:root {
+    /*---lilas----*/
+    --cerise-color: #DB1E8C;
+    /*---rosa---*/
+    --carnation-color: #FF97D3;
+    
+    /*---preto-claro---*/
+    --pickled-bluewood-color: #313C53;
+    
+    /*---branco----*/
+    --white-color: #FFFFFF;
+    
+    /*---azul----*/
+    --blue-color: #0000EE;
+    ;
+    
+    /*---azul-meio-claro---*/
+    --medium-light-blue: #264FEC;
+    
+    /*azul-escuro*/
+    --cornflower-color: #33475B;
+    
+    /*Cinza escuro*/
+    --DarkGray-color: #A9A9A9;
+    
+    /*tom de azul escuro médio*/
+    --Medium-dark-shade-of-blue-color: #364372;
+}
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--cornflower-color);
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* ---- Header ---- */
+header{
+    background-color: var(--white-color);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.header-barra-topo{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titulo-principal{
+    font-size: 24px;
+    color: var(--blue-color);
+}
+.link-titulo{
+    text-decoration: none;
+}
+.titulo-principal:hover{
+    background-color: var(--white-color);
+    color: var(--medium-light-blue);
+    text-decoration: underline;
+
+}
+.label-pesquisar{
+    background-color: var(--cerise-color);
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.lupa img{    
+    width: 35px;
+    display: none;
+}
+.label-input{
+    background-color: transparent;
+    color: var(--carnation-color);
+    height: 25px;
+    border: none;
+    font-size: 1em;
+    padding: .4em;
+    outline-color: var(--carnation-color);
+}
+::placeholder{
+    color: var(--carnation-color);
+}
+
+/* ---- Main ---- */
+.container-list{
+    max-width: 1280px;
+    margin: 37px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-card{
+    border: outset 1px var(--DarkGray-color);
+    border-width: 3px;
+    Width: 400px;
+    Height: 445px;
+    background-color: var(--white-color);
+    margin-bottom: 2rem;
+    list-style: none;
+    padding: 2rem;
+    position: relative;
+}
+.titulo-card{
+    color: var(--Medium-dark-shade-of-blue-color);
+    margin-bottom: 2rem;
+}
+.descricao-lista{
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+.div-button{
+    width: 138px;
+    border: 1px solid var(--medium-light-blue);
+    border-radius: 4px;
+    font-size: .9rem;
+    text-align: center;
+    padding: 14px;
+    position: absolute;
+    bottom: 2rem;
+    color: var(--medium-light-blue);
+}
+.div-button:hover, a:hover{
+    transition: .4s all;
+    cursor: pointer;
+    background-color: var(--medium-light-blue);
+    color: var(--white-color);
+}
+
+/* ---- footer ---- */
+footer {
+    background-color: var(--white-color);
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+.nav-footer{
+    width: 1280px;
+    margin: 0 auto;
+}
+.ul-footer{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.ul-footer li:nth-child(1){
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-right{
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+.list-regulamento{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.list-regulamento a{
+    color: var(--pickled-bluewood-color);
+    text-decoration: none;
+    background-color: var(--white-color);
+}
+.list-regulamento a:hover, .redes-sociais a p:hover{
+    text-decoration: underline;
+}
+.redes-sociais{
+    width: 165px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.redes-sociais a, .desenvolve-footer a, .li-boticario-alura a{
+    color: var(--pickled-bluewood-color);
+    text-decoration: none;
+    background-color: var(--white-color);
+}
+
+/*---Responsivo---*/
+@media screen and (max-width: 1222px){
+    .header-barra-topo{
+        max-width: 900px;
+        padding: 0 .6rem;
+    }
+    .container-list{
+        max-width: 900px;
+        padding: 0 .6rem;
+    }
+    footer{
+        height: 80px;
+        padding-top: .9rem;
+    }
+    .nav-footer {
+        max-width: 900px;
+        height: 68px;
+        padding: 0 .6rem;
+    }    
+    .ul-footer li:first-child{
+        width: 230px;
+        height: 62px;
+    }
+    .desenvolve-footer img{
+        width: 170px;
+    }
+    .list-regulamento{
+        width: 170px;
+        height: 62px;
+    }
+    .redes-sociais{
+        width: 170px;
+        height: 62px;
+    }
+}
+@media screen and (max-width: 838px){
+    .header-barra-topo{
+        max-width: 768px;
+        padding: 0 .2rem;
+    }
+    .container-list{
+        max-width: 768px;
+        padding: 0 .2rem;
+    }
+    .list-card {
+        Width: 340px;
+        Height:400px;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }    
+    .titulo-card {
+        font-size: 1.4rem;
+        margin-bottom: .6rem;
+    }
+    
+    .descricao-lista {
+        font-size: .9rem;
+        margin-bottom: 1rem;
+    }
+    .div-button {
+        width: 238px;
+        font-size: .9rem;
+        padding: 10px;
+        bottom: 2rem;
+    }
+    footer {
+        height: 80px;
+        padding-top: .9rem;
+    }
+    
+    .nav-footer {
+        max-width: 768px;
+        padding: 0 .2rem;
+    }
+    
+    .ul-footer li:first-child {
+        width: 200px;
+        height: 52px;
+    }
+    .li-boticario-alura img{
+        width: 80px;
+    }
+    
+    .desenvolve-footer img {
+        padding-left: .6rem;
+        width: 150px;
+    }
+    .list-regulamento {
+        margin-left: .4rem;
+        width: 150px;
+        height: 52px;
+        font-size: .8rem;
+    } 
+    .footer-right{
+        width: 350px;
+    }
+    .redes-sociais {
+        font-size: .9rem;
+        width: 180px;
+        height: 58px;
+    }
+}
+/*---Celular---*/
+@media screen and (max-width: 703px){
+    .header-barra-topo{
+        max-width: 360px;
+        padding: 0;
+    }
+    .titulo-principal{
+        font-size: 1.1rem;
+    }
+    .label-pesquisar{
+        display: none;
+    }
+    .lupa img {
+        width: 35px;
+        display: flex;
+    }
+    .container-list{
+        max-width: 360px;
+        padding: 0;
+    }
+    .list-card {
+        Width: 100%;
+        Height: 400px;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    .div-button {
+        width: 85%;
+        font-size: .9rem;
+        padding: 10px;
+        bottom: 2rem;
+    }
+    footer {
+        height: 160px;
+        padding-top: .9rem;
+    }        
+    .nav-footer {
+        max-width: 360px;
+        padding: 0 .2rem;
+        height: 160px;
+        display: flex;
+    }
+    .ul-footer{
+        flex-wrap: wrap;
+    }
+    .ul-footer li:first-child {
+        width: 185px;               
+    }   
+    .list-regulamento {
+            margin-left:0;             
+            height: 60px;
+            font-size: .8rem;
+    }
+
+    .footer-right {
+            width: 100%;
+            height: 63px;
+    }
+
+    .redes-sociais {
+            width: 130px;
+            height: 70px;
+    }
+}
